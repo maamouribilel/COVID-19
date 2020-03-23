@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="mt-5 font-weight-bold text-center">Les statistiques du COVID-19 en Tunisie - SAMU: 190 ou 80 10 19 19.</h4>
+        </div>
+    </div>
+    <div class="row mt-3 pt-3" style="background-color: #eeeeee">
+        <div class="col-md-12">
+            <!-- Card group -->
+            <div *ngIf="infectionData != undefined" class="card-group">
+
+
+                <!-- Card -->
+                <div class="card mb-4 alert alert-info">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title">Confirmed Cases: </h6>
+                        <!-- Text -->
+                        <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i><span class="ml-2"
+                                style="font-size: 30px;">{{infectionData.cases}}</span></p>
+                    </div>
+                    <!-- Card content -->
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4 alert alert-success">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title">Recovered: </h6>
+                        <!-- Text -->
+                        <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i><span class="ml-2"
+                                style="font-size: 30px;">{{infectionData.recovered }}</span></p>
+                    </div>
+                    <!-- Card content -->
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4 alert alert-danger">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title">Deaths: </h6>
+                        <!-- Text -->
+                        <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i><span class="ml-2"
+                                style="font-size: 30px;">{{infectionData.deaths }}</span></p>
+                    </div>
+                    <!-- Card content -->
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4 alert alert-warning">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title">Critical: </h6>
+                        <!-- Text -->
+                        <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i><span class="ml-2"
+                                style="font-size: 30px;">{{infectionData.critical}}</span></p>
+                    </div>
+                    <!-- Card content -->
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4 alert alert-light">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title">Active: </h6>
+                        <!-- Text -->
+                        <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i><span class="ml-2"
+                                style="font-size: 30px;">{{infectionData.active}}</span></p>
+                    </div>
+                    <!-- Card content -->
+                </div>
+                <!-- Card -->
+
+
+            </div>
+            <!-- Card group -->
+        </div>
+
+    </div>
+    <br><br>
+    <div class="card col-12 justify-content-center">
+        <div class="chart-wrapper">
+            <canvas baseChart 
+                [datasets]="lineChartData" 
+                [labels]="lineChartLabels" 
+                [options]="lineChartOptions"
+                [colors]="lineChartColors" 
+                [legend]="lineChartLegend" 
+                [chartType]="lineChartType" 
+                [plugins]="lineChartPlugins">
+            </canvas>
+        </div>
+    </div>
+
+</div>
