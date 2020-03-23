@@ -7,7 +7,7 @@ import { InfectionData } from '../interfaces/infection-data';
   providedIn: 'root'
 })
 export class DataService {
-  endpoint1 = 'http://covid19.soficoop.com/country/tn';
+  endpoint1 = 'https://covid19.soficoop.com/country/tn';
   // https://github.com/javieraviles/covidAPI
   // https://novel-coronavirus-reports.netlify.com/
   endpoint2 = 'https://coronavirus-19-api.herokuapp.com/countries/TUNISIA';
