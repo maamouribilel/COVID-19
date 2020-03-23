@@ -64,8 +64,8 @@ export class HomeComponent implements OnInit {
       tempDataTable.map(c => {
         this.dataTable.push(c['cases']);
         // console.log(this.dataTable);
-        this.labelsTable.push(c['timestamp']);
-     //   console.log(this.labelsTable);
+        this.labelsTable.push(c['timestamp'].substr(0,16));
+        console.log(this.labelsTable);
       }); // end map
 
       //this.lineChartData= this.dataTable.splice(this.dataTable.length-10, this.dataTable.length);
