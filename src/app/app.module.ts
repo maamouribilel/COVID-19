@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ChartsModule } from 'ng2-charts';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
