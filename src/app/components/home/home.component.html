@@ -87,7 +87,8 @@
 
     </div>
     <br><br>
-    <div class="card col-12 justify-content-center">
+    <div class="row">
+    <div class="card col-6 justify-content-center">
         <div class="chart-wrapper">
             <canvas baseChart
                 [datasets]="lineChartData" 
@@ -100,5 +101,42 @@
             </canvas>
         </div>
     </div>
-
+    <div class="card col-6">
+        <agm-map   [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        [zoomControl]="false"
+        (mapClick)="mapClicked($event)"
+        [styles]="mapStyle"
+        >
+        <agm-marker 
+        *ngFor="let m of markers; let i = index"
+        (markerClick)="clickedMarker(m.label, i)"
+        [latitude]="m.lat"
+        [longitude]="m.lng"
+        [label]="{
+            color: '#ffffff',
+            fontWeight: 'regular',
+            text: (m.number).toString()
+        }"
+        [markerDraggable]="m.draggable"
+        (dragEnd)="markerDragEnd(m, $event)">
+        <!--
+      <agm-info-window>
+        <strong>InfoWindow content</strong>
+      </agm-info-window>
+      -->
+    </agm-marker>
+     <!--
+    <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+        [radius]="5000"
+        [fillColor]="'red'"
+        [circleDraggable]="true"
+        [editable]="true">
+    </agm-circle>
+-->
+          </agm-map>
+        </div>
+</div>
 </div>

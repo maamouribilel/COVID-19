@@ -11,6 +11,7 @@ import { ChartsModule } from 'ng2-charts';
 import { DataService } from './services/data.service';
 import { SymptomsComponent } from './components/symptoms/symptoms.component';
 import { MedicalAidComponent } from './components/medical-aid/medical-aid.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,11 @@ import { MedicalAidComponent } from './components/medical-aid/medical-aid.compon
     AppRoutingModule,
     HttpClientModule,
     NgxSpinnerModule,
-    ChartsModule
+    ChartsModule,
+    AgmCoreModule.forRoot({
+      //AIzaSyDHnIrJsd22La-vDm2SQdHv_pWHJwdzAAo
+      apiKey: 'AIzaSyCDhjF3LNn2qqYUivCkiyYD8lQMAzihz7I'
+    })
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DataService],
