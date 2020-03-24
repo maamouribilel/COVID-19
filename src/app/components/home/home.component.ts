@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   lat = 35.59919355076173;
   lng = 9.624992224979998 ;
     // google maps zoom level
-    zoom: number = 6.7;
+    zoom: number = 5.8;
     markers: marker[] = [
       {
         lat: 36.8296878473944,

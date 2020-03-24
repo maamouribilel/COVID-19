@@ -89,8 +89,8 @@
     <br><br>
     <div class="row">
 
-        <div class="card col-md-12 col-xs-12 col-sm-12">
-            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
+        <div class="card col-md-6 col-xs-12 col-sm-12">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="true" [zoomControl]="false"
                 (mapClick)="mapClicked($event)" [styles]="mapStyle">
                 <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
                     [latitude]="m.lat" [longitude]="m.lng" [label]="{
@@ -113,12 +113,12 @@
     </agm-circle>
 -->
             </agm-map>
-            <button (click)="localizePosition()" class="btn btn-primary float d-none d-md-block" data-toggle="tooltip" data-placement="top" title="Ma position">
+            <button (click)="localizePosition()" class="btn btn-primary offset-11 col-1" data-toggle="tooltip" data-placement="top" title="Ma position">
                 <i class="fas fa-crosshairs my-float"></i>
             </button>
         </div>
 
-        <div class="card col-md-12 col-xs-12 col-sm-12">
+        <div class="card col-md-6 col-xs-12 col-sm-12">
             <div class="chart-wrapper">
                 <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
                     [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
