@@ -9,7 +9,7 @@ interface marker {
 	lat: number;
 	lng: number;
   label?: string;
-  number: number;
+  number: any;
 	draggable: boolean;
 }
 
@@ -468,7 +468,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getIfectionData();
     this.getStatsdata();
-
   }
 
   getIfectionData() {
@@ -519,6 +518,31 @@ console.log("aaaaa",this.dataTable);
     /*
     console.log('dragEnd', m, $event);
     */
+  }
+
+  localizePosition(){
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        /* Location tracking code */
+        //this.currentLocation = position.coords;
+        this.markers.push(      {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          label: '',
+          number: 'Ma position',
+          draggable: false
+        });
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+        this.zoom = 9.5 ;
+        console.log(position.coords);
+      },
+      (failure) => {
+        if (failure.message.indexOf("Only secure origins are allowed") == 0) {
+          alert('Only secure origins are allowed by your browser.');
+        }
+      }
+    );
   }
 
 }
