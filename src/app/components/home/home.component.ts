@@ -65,112 +65,112 @@ export class HomeComponent implements OnInit {
         lng: 9.867113994811723,
         label: 'La Manouba',
         number: 1,
-        draggable: true
+        draggable: false
       },
       {
         lat: 36.67648706798987,
         lng: 9.316922824336906,
         label: 'Beja',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 36.67648706798987,
         lng: 9.316922824336906,
         label: 'Jendouba',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 36.063713633929936,
         lng: 8.678384450825991,
         label: 'Le Kef',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 36.037066304075324,
         lng: 9.299111989888491,
         label: 'Siliana',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 36.40633301042683,
         lng: 10.011207361660679,
         label: 'Zaghouan',
         number: 1,
-        draggable: true
+        draggable: false
       },
       {
         lat: 35.89956217310192,
         lng: 10.443783056807105,
         label: 'Sousse',
         number: 6,
-        draggable: true
+        draggable: false
       },
       {
         lat: 35.763170489199084,
         lng: 9.839225623417498,
         label: 'Kairouan',
         number: 2,
-        draggable: true,
+        draggable: false,
       },
       {
         lat: 35.63447482915911,
         lng: 10.723483761067468,
         label: 'Monastir',
         number: 7,
-        draggable: true
+        draggable: false
       },
       {
         lat: 35.383027014557854,
         lng: 10.860812862629968,
         label: 'Mahdia',
         number: 3,
-        draggable: true
+        draggable: false
       },
       {
         lat: 35.29306159222377,
         lng: 8.7675770337282,
         label: 'Kasserine',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 34.90304961843806,
         lng: 9.502446209211598,
         label: 'Sidi Bouzid',
         number: 0,
-        draggable: true
+        draggable: false
       },
       {
         lat: 34.74974960275333,
         lng: 10.395151421166918,
         label: 'Sfax',
         number: 5,
-        draggable: true
+        draggable: false
       },
       {
         lat: 34.43255107554276,
         lng: 8.697205247115324,
         label: 'Gafsa',
         number: 1,
-        draggable: true
+        draggable: false
       },
       {
         lat: 33.8144616330769,
         lng: 9.83858835439011,
         label: 'Gabès',
         number: 1,
-        draggable: true
+        draggable: false
       },
       {
         lat: 33.39714680679499,
         lng: 10.760154322247088,
         label: 'Mednine',
         number: 9,
-        draggable: true
+        draggable: false
       }
       ,
       {
@@ -178,7 +178,7 @@ export class HomeComponent implements OnInit {
         lng: 9.843601300436378,
         label: 'Tataouine',
         number: 6,
-        draggable: true
+        draggable: false
       }
       ,
       {
@@ -186,7 +186,7 @@ export class HomeComponent implements OnInit {
         lng: 7.873555573095867,
         label: 'Tozeur',
         number: 0,
-        draggable: true
+        draggable: false
       }
       ,
       {
@@ -194,7 +194,7 @@ export class HomeComponent implements OnInit {
         lng: 8.864260209156498,
         label: 'Kebili',
         number: 1,
-        draggable: true
+        draggable: false
       }
     ]
    mapStyle=  [
@@ -501,18 +501,24 @@ console.log("aaaaa",this.dataTable);
   }
 
   mapClicked($event: MouseEvent) {
+    /*
     this.markers.push({
       lat: $event['coords'].lat,
       lng: $event['coords'].lng,
       number: 0,
       draggable: true
     });
+    */
   }
   clickedMarker(label: string, index: number) {
+    /*
     console.log(`clicked the marker: ${label || index}`)
+    */
   }
   markerDragEnd(m: marker, $event: MouseEvent) {
+    /*
     console.log('dragEnd', m, $event);
+    */
   }
 
 }
