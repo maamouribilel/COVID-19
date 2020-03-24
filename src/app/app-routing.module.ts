@@ -8,13 +8,8 @@ import { MedicalAidComponent } from './components/medical-aid/medical-aid.compon
 const routes: Routes = [
 
 
-  { path: '', component: HomeComponent, children :  [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    {path: 'home', component: HomeComponent},
 
-
-
-  ] },
+  {path: '', component: HomeComponent},
   {path: 'symptoms', component: SymptomsComponent},
   {path: 'medical-aid', component: MedicalAidComponent},  
 /*
