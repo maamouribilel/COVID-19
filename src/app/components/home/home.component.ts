@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   lineChartColors: Color[] = [
     {
       borderColor: 'black',
-      backgroundColor: '#00b894',
+      backgroundColor: '#00cec9',
     },
   ];
 

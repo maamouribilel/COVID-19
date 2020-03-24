@@ -9,11 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ChartsModule } from 'ng2-charts';
 import { DataService } from './services/data.service';
+import { SymptomsComponent } from './components/symptoms/symptoms.component';
+import { MedicalAidComponent } from './components/medical-aid/medical-aid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SymptomsComponent,
+    MedicalAidComponent
   ],
   imports: [
     BrowserModule,
