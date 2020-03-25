@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
         lat: 36.66577743735055,
         lng: 10.619411561738511,
         label: 'Nabeul',
-        number: 1,
+        number: 2,
         draggable: false
       },
       {
