@@ -442,10 +442,14 @@ export class HomeComponent implements OnInit {
   ];
 
   infectionData: any;
-  dataTable = [];
+  dataTable1 = [];
+  dataTable2 = [];
+  dataTable3 = [];
   labelsTable = [];
   lineChartData: any[] = [
-    {data: this.dataTable, label: 'Infected Cases' },
+    {data: this.dataTable1, label: 'Cas Confirmés' },
+    {data: this.dataTable2, label: 'Rétablis' },
+    {data: this.dataTable3, label: 'Décès' },
   ];
 
   lineChartLabels: Label[] = this.labelsTable;
@@ -510,26 +514,28 @@ public polarAreaChartType: ChartType = 'polarArea';
     this.dataService.getInfectionData().subscribe((res: any) => {
       this.spinner.show();
       this.infectionData = res;
-      console.log("Recieved data => ", this.infectionData);
+    //  console.log("Recieved data => ", this.infectionData);
       this.spinner.hide();
     });
   }
 
   getStatsdata() {
     this.dataService.getStatsData().subscribe((res:[]) => {
-      //console.log(res['snapshots']);
+      console.log(res['snapshots']);
       let tempDataTable= [];
       tempDataTable = res['snapshots'];
       tempDataTable.map(c => {
-        this.dataTable.push(c['cases']);
+        this.dataTable1.push(c['cases']);
+        this.dataTable2.push(c['deaths']);
+        this.dataTable3.push(c['recovered']);
         // console.log(this.dataTable);
         this.labelsTable.push(c['timestamp'].substr(0,16));
-        console.log(this.labelsTable);
+      //  console.log(this.labelsTable);
       }); // end map
 
       //this.lineChartData= this.dataTable.splice(this.dataTable.length-10, this.dataTable.length);
    //   this.lineChartLabels= this.labelsTable.splice(this.dataTable.length-10, this.dataTable.length);
-console.log("aaaaa",this.dataTable);
+// console.log("aaaaa",this.dataTable);
 
 
     });
@@ -571,7 +577,7 @@ console.log("aaaaa",this.dataTable);
         this.lat = position.coords.latitude;
         this.lng = position.coords.longitude;
         this.zoom = 9.5 ;
-        console.log(position.coords);
+      //  console.log(position.coords);
       },
       (failure) => {
         if (failure.message.indexOf("Only secure origins are allowed") == 0) {
