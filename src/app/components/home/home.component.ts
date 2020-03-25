@@ -521,7 +521,7 @@ public polarAreaChartType: ChartType = 'polarArea';
 
   getStatsdata() {
     this.dataService.getStatsData().subscribe((res:[]) => {
-      console.log(res['snapshots']);
+    //  console.log(res['snapshots']);
       let tempDataTable= [];
       tempDataTable = res['snapshots'];
       tempDataTable.map(c => {
