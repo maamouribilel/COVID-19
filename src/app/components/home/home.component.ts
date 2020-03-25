@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ChartDataSets, ChartOptions, ChartPoint } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import { ChartDataSets, ChartOptions, ChartPoint, ChartType } from 'chart.js';
+import { Color, Label, SingleDataSet } from 'ng2-charts';
 
 // just an interface for type safety.
 interface marker {
@@ -67,6 +67,7 @@ export class HomeComponent implements OnInit {
         number: 3,
         draggable: false
       },
+      /*
       {
         lat: 36.67648706798987,
         lng: 9.316922824336906,
@@ -95,6 +96,7 @@ export class HomeComponent implements OnInit {
         number: 0,
         draggable: false
       },
+      */
       {
         lat: 36.40633301042683,
         lng: 10.011207361660679,
@@ -130,6 +132,7 @@ export class HomeComponent implements OnInit {
         number: 3,
         draggable: false
       },
+      /*
       {
         lat: 35.29306159222377,
         lng: 8.7675770337282,
@@ -137,6 +140,7 @@ export class HomeComponent implements OnInit {
         number: 0,
         draggable: false
       },
+     
       {
         lat: 34.90304961843806,
         lng: 9.502446209211598,
@@ -144,6 +148,7 @@ export class HomeComponent implements OnInit {
         number: 0,
         draggable: false
       },
+       */
       {
         lat: 34.74974960275333,
         lng: 10.395151421166918,
@@ -181,14 +186,15 @@ export class HomeComponent implements OnInit {
         draggable: false
       }
       ,
+      /*
       {
         lat: 33.96043402368186,
         lng: 7.873555573095867,
         label: 'Tozeur',
         number: 0,
         draggable: false
-      }
-      ,
+      },*/
+      
       {
         lat: 33.31076079071958,
         lng: 8.864260209156498,
@@ -459,7 +465,37 @@ export class HomeComponent implements OnInit {
   lineChartPlugins = [];
   lineChartType = 'bar';
 
+// Pie
+public pieChartOptions: ChartOptions = {
+  responsive: true,
+  legend: {
+    position: 'top',
+  },
+  plugins: {
+    datalabels: {
+      formatter: (value, ctx) => {
+        const label = ctx.chart.data.labels[ctx.dataIndex];
+        return label;
+      },
+    },
+  }
+};
+public pieChartLabels: Label[] = [['Importé'], ['Locaux']];
+// origine de contamination
+public pieChartData: number[] = [67, 33];
+public pieChartType: ChartType = 'pie';
+public pieChartLegend = true;
+public pieChartPlugins = [];
+public pieChartColors = [
+  {
+    backgroundColor: ['#375a7f', '#00cec9'],
+  },
+];
 
+public polarAreaChartLabels: Label[] = ['0 - 15 ans', '15 - 30 ans', '30 - 45 ans', '45 - 60 ans', '60 ans et plus'];
+public polarAreaChartData: SingleDataSet = [2, 16, 24, 23, 23];
+public polarAreaLegend = true;
+public polarAreaChartType: ChartType = 'polarArea';
 
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) {
 

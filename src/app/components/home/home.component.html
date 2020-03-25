@@ -122,8 +122,36 @@
             <div class="chart-wrapper">
                 <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
                     [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
-                    [plugins]="lineChartPlugins">
+                    [plugins]="lineChartPlugins" >
                 </canvas>
+            </div>
+        </div>
+        <div class="card col-md-6 col-xs-12 col-sm-12">
+            <br>
+            <p class="text-center">Origine de la contamination</p>
+            <div class="chart-wrapper">
+                <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [options]="pieChartOptions"
+                [plugins]="pieChartPlugins"
+                [colors]="pieChartColors"
+                [legend]="pieChartLegend">
+              </canvas>
+            </div>
+        </div>
+
+        <div class="card col-md-6 col-xs-12 col-sm-12">
+            <br>
+            <p class="text-center">Cas confirmés par tranche d'âge</p>
+            <div class="chart-wrapper">
+                <canvas baseChart
+                [data]="polarAreaChartData"
+                [labels]="polarAreaChartLabels"
+                [legend]="polarAreaLegend"
+                [chartType]="polarAreaChartType">
+              </canvas>
             </div>
         </div>
     </div>
