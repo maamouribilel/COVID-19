@@ -526,8 +526,8 @@ public polarAreaChartType: ChartType = 'polarArea';
       tempDataTable = res['snapshots'];
       tempDataTable.map(c => {
         this.dataTable1.push(c['cases']);
-        this.dataTable2.push(c['deaths']);
-        this.dataTable3.push(c['recovered']);
+        this.dataTable3.push(c['deaths']);
+        this.dataTable2.push(c['recovered']);
         // console.log(this.dataTable);
         this.labelsTable.push(c['timestamp'].substr(0,16));
       //  console.log(this.labelsTable);
