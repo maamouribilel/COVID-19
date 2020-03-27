@@ -14,6 +14,7 @@ import { MedicalAidComponent } from './components/medical-aid/medical-aid.compon
 import { AgmCoreModule } from '@agm/core';
 import { WorldInfoComponent } from './components/world-info/world-info.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NoRightClickDirective } from './directives/no-right-click.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     HomeComponent,
     SymptomsComponent,
     MedicalAidComponent,
-    WorldInfoComponent
+    WorldInfoComponent,
+    NoRightClickDirective
   ],
   imports: [
     BrowserModule,

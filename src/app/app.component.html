@@ -1,5 +1,5 @@
 <ngx-spinner></ngx-spinner>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" appNoRightClick>
     <a class="navbar-brand" [routerLink]="['/']" 
 ><i class="fas fa-notes-medical"></i> COVID19-TN</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +36,10 @@
     -->
     </div>
   </nav>
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Made with ❤️ By 
+  <div appNoRightClick class="footer-copyright text-center py-3">Made with ❤️ By 
     <a href="https://www.facebook.com/maamouri.bilell/"> Bilel.M </a>
   </div>
   <!-- Copyright -->
