@@ -29,35 +29,35 @@ export class HomeComponent implements OnInit {
         lat: 36.8296878473944,
         lng: 10.124534251973637,
         label: 'Tunis',
-        number: 52,
+        number: 55,
         draggable: false
       },
       {
         lat: 36.675161898545305,
         lng: 10.218753437255579,
         label: 'Ben Arous',
-        number: 17,
+        number: 23,
         draggable: false
       },
       {
         lat: 36.66577743735055,
         lng: 10.619411561738511,
         label: 'Nabeul',
-        number: 2,
+        number: 3,
         draggable: false
       },
       {
         lat: 36.96561924096172,
         lng: 10.097932124711377,
         label: 'Ariana',
-        number: 33,
+        number: 34,
         draggable: false
       },
       {
         lat: 37.14144514551905,
         lng: 9.597074191524406,
         label: 'Bizert',
-        number: 4,
+        number: 11,
         draggable: false
       },
       {
@@ -87,7 +87,7 @@ export class HomeComponent implements OnInit {
         lat: 36.063713633929936,
         lng: 8.678384450825991,
         label: 'Le Kef',
-        number: 1,
+        number: 2,
         draggable: false
       },
 
@@ -111,7 +111,7 @@ export class HomeComponent implements OnInit {
         lat: 35.89956217310192,
         lng: 10.443783056807105,
         label: 'Sousse',
-        number: 16,
+        number: 17,
         draggable: false
       },
       {
@@ -125,7 +125,7 @@ export class HomeComponent implements OnInit {
         lat: 35.63447482915911,
         lng: 10.723483761067468,
         label: 'Monastir',
-        number: 14,
+        number: 17,
         draggable: false
       },
       {
@@ -143,15 +143,14 @@ export class HomeComponent implements OnInit {
         number: 0,
         draggable: false
       },
-     
+     */
       {
         lat: 34.90304961843806,
         lng: 9.502446209211598,
         label: 'Sidi Bouzid',
-        number: 0,
+        number: 1,
         draggable: false
       },
-       */
       {
         lat: 34.74974960275333,
         lng: 10.395151421166918,
@@ -189,14 +188,13 @@ export class HomeComponent implements OnInit {
         draggable: false
       }
       ,
-      /*
       {
         lat: 33.96043402368186,
         lng: 7.873555573095867,
         label: 'Tozeur',
-        number: 0,
+        number: 6,
         draggable: false
-      },*/
+      },
       
       {
         lat: 33.31076079071958,
