@@ -12,13 +12,16 @@ import { DataService } from './services/data.service';
 import { SymptomsComponent } from './components/symptoms/symptoms.component';
 import { MedicalAidComponent } from './components/medical-aid/medical-aid.component';
 import { AgmCoreModule } from '@agm/core';
+import { WorldInfoComponent } from './components/world-info/world-info.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SymptomsComponent,
-    MedicalAidComponent
+    MedicalAidComponent,
+    WorldInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { AgmCoreModule } from '@agm/core';
     HttpClientModule,
     NgxSpinnerModule,
     ChartsModule,
+    NgxDatatableModule,
     AgmCoreModule.forRoot({
       //AIzaSyDHnIrJsd22La-vDm2SQdHv_pWHJwdzAAo
       apiKey: 'AIzaSyCDhjF3LNn2qqYUivCkiyYD8lQMAzihz7I'

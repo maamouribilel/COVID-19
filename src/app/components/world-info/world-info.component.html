@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="mt-5 font-weight-bold text-center">Les statistiques du COVID-19 dans le monde entier.</h4>
+        </div>
+    </div>
+    <br>
+    <div class="col-4 offset-4 row">
+        <input class="form-control" type="text" (keyup)="filterDatatable($event)" placeholder="Chercher">
+    </div>
+    <br>
+
+    <ngx-datatable #table class="dark" [rows]="data" [columns]="columns" [columnMode]="'force'" [headerHeight]="50"
+        [loadingIndicator]="true" [rowHeight]="50" >
+    <ng-template #flagTemplate ngx-datatable-cell-template let-row="row" let-value="value" let-i="index">
+        <img src="{{value}}" alt="" srcset="" style="width: 35px;height: 28px;">
+      </ng-template>
+    </ngx-datatable>
+
+</div>
