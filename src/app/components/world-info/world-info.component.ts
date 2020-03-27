@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, TemplateRef, HostListener } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -35,14 +35,30 @@ export class WorldInfoComponent implements OnInit {
   data: any[] = [];
   flags: any = [];
   isLoading: boolean = false;
-  columns: any[] = []
-
+  allColumns: any[] = [];
+  columns: any[] = [];
+//resizing listener
+@HostListener('window:resize', ['$event'])
+    onResize(event) {
+        //if mobile
+        if (event.target.innerWidth < 1024) {
+            this.columns = this.columns.filter(x => x.prop != 'critical');
+          //  this.columns = this.columns.filter(x => x.prop != 'countryInfo.flag');
+            this.columns = this.columns.filter(x => x.prop != 'deathsPerOneMillion');
+            this.columns = this.columns.filter(x => x.prop != 'casesPerOneMillion');
+            this.columns = this.columns.filter(x => x.prop != 'active');
+            // this.columns = this.columns.filter(x => x.prop != 'recovered');
+        } else {
+            this.columns = this.allColumns;
+        }
+    }
 
 
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) {
   }
 
   ngOnInit() {
+
     this.columns = [
       { prop: 'countryInfo.flag', name: 'flag', cellTemplate: this.flagTemplate },
       { prop: 'country' },
@@ -56,6 +72,20 @@ export class WorldInfoComponent implements OnInit {
       { prop: 'casesPerOneMillion', name: 'Cases/1mil' },
       { prop: 'deathsPerOneMillion', name: 'Deaths/1mil' },
     ];
+    this.allColumns = [
+      { prop: 'countryInfo.flag', name: 'flag', cellTemplate: this.flagTemplate },
+      { prop: 'country' },
+      { prop: 'cases' },
+      { prop: 'todayCases' },
+      { prop: 'deaths' },
+      { prop: 'todayDeaths' },
+      { prop: 'recovered' },
+      { prop: 'active' },
+      { prop: 'critical' },
+      { prop: 'casesPerOneMillion', name: 'Cases/1mil' },
+      { prop: 'deathsPerOneMillion', name: 'Deaths/1mil' },
+    ];
+    this.hideColmunsMobile();
     this.initDatatable();
   }
 
@@ -101,5 +131,21 @@ export class WorldInfoComponent implements OnInit {
     // whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
+
+hideColmunsMobile(){
+
+    //if mobile
+    if (window.innerWidth < 1024) {
+      this.columns = this.columns.filter(x => x.prop != 'critical');
+      //  this.columns = this.columns.filter(x => x.prop != 'countryInfo.flag');
+        this.columns = this.columns.filter(x => x.prop != 'deathsPerOneMillion');
+        this.columns = this.columns.filter(x => x.prop != 'casesPerOneMillion');
+        this.columns = this.columns.filter(x => x.prop != 'active');
+      //  this.columns = this.columns.filter(x => x.prop != 'recovered');
+    } else {
+        this.columns = this.allColumns;
+    }
+
+}
 
 }
