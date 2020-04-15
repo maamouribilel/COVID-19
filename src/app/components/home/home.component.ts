@@ -29,42 +29,42 @@ export class HomeComponent implements OnInit {
         lat: 36.8296878473944,
         lng: 10.124534251973637,
         label: 'Tunis',
-        number: 132,
+        number: 174,
         draggable: false
       },
       {
         lat: 36.675161898545305,
         lng: 10.218753437255579,
         label: 'Ben Arous',
-        number: 54,
+        number: 79,
         draggable: false
       },
       {
         lat: 36.66577743735055,
         lng: 10.619411561738511,
         label: 'Nabeul',
-        number: 11,
+        number: 12,
         draggable: false
       },
       {
         lat: 36.96561924096172,
         lng: 10.097932124711377,
         label: 'Ariana',
-        number: 69,
+        number: 84,
         draggable: false
       },
       {
         lat: 37.14144514551905,
         lng: 9.597074191524406,
-        label: 'Bizert',
-        number: 15,
+        label: 'Bizerte',
+        number: 17,
         draggable: false
       },
       {
         lat: 36.80973428883044,
         lng: 9.867113994811723,
         label: 'La Manouba',
-        number: 16,
+        number: 35,
         draggable: false
       },
     
@@ -72,18 +72,18 @@ export class HomeComponent implements OnInit {
         lat: 36.67648706798987,
         lng: 9.316922824336906,
         label: 'Beja',
-        number: 1,
+        number: 3,
         draggable: false
       },
-      /*
+    
       {
         lat: 36.67648706798987,
         lng: 9.316922824336906,
         label: 'Jendouba',
-        number: 0,
+        number: 1,
         draggable: false
       },
-      */
+      
       {
         lat: 36.063713633929936,
         lng: 8.678384450825991,
@@ -105,35 +105,35 @@ export class HomeComponent implements OnInit {
         lat: 36.40633301042683,
         lng: 10.011207361660679,
         label: 'Zaghouan',
-        number: 2,
+        number: 3,
         draggable: false
       },
       {
         lat: 35.89956217310192,
         lng: 10.443783056807105,
         label: 'Sousse',
-        number: 48,
+        number: 64,
         draggable: false
       },
       {
         lat: 35.763170489199084,
         lng: 9.839225623417498,
         label: 'Kairouan',
-        number: 4,
+        number: 6,
         draggable: false,
       },
       {
         lat: 35.63447482915911,
         lng: 10.723483761067468,
         label: 'Monastir',
-        number: 27,
+        number: 35,
         draggable: false
       },
       {
         lat: 35.383027014557854,
         lng: 10.860812862629968,
         label: 'Mahdia',
-        number: 10,
+        number: 12,
         draggable: false
       },
 
@@ -156,28 +156,28 @@ export class HomeComponent implements OnInit {
         lat: 34.74974960275333,
         lng: 10.395151421166918,
         label: 'Sfax',
-        number: 29,
+        number: 31,
         draggable: false
       },
       {
         lat: 34.43255107554276,
         lng: 8.697205247115324,
         label: 'Gafsa',
-        number: 10,
+        number: 23,
         draggable: false
       },
       {
         lat: 33.8144616330769,
         lng: 9.83858835439011,
         label: 'Gabès',
-        number: 7,
+        number: 15,
         draggable: false
       },
       {
         lat: 33.39714680679499,
         lng: 10.760154322247088,
         label: 'Mednine',
-        number: 58,
+        number: 70,
         draggable: false
       }
       ,
@@ -185,7 +185,7 @@ export class HomeComponent implements OnInit {
         lat: 32.06167466405954,
         lng: 9.843601300436378,
         label: 'Tataouine',
-        number: 17,
+        number: 23,
         draggable: false
       }
       ,
@@ -193,7 +193,7 @@ export class HomeComponent implements OnInit {
         lat: 33.96043402368186,
         lng: 7.873555573095867,
         label: 'Tozeur',
-        number: 1,
+        number: 3,
         draggable: false
       },
       
@@ -201,7 +201,7 @@ export class HomeComponent implements OnInit {
         lat: 33.31076079071958,
         lng: 8.864260209156498,
         label: 'Kebili',
-        number: 30,
+        number: 45,
         draggable: false
       }
     ]
