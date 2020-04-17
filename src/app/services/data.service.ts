@@ -12,7 +12,8 @@ export class DataService {
   endpoint2 = 'https://coronavirus-19-api.herokuapp.com/countries/TUNISIA';
   endpoint3 = 'https://covid19.mathdro.id/api';
   worldEndpoint='https://coronavirus-19-api.herokuapp.com/countries';
-  testEndpoint = 'https://corona.lmao.ninja/countries';
+  testEndpoint = 'https://corona.lmao.ninja/v2/countries';  
+
   
   constructor(private http: HttpClient) { }
 
