@@ -29,7 +29,7 @@ export class WorldInfoComponent implements OnInit {
     "deathsPerOneMillion": 2
   */
   @ViewChild('flagTemplate', { static: true }) public flagTemplate: TemplateRef<any>;
-  @ViewChild('table', { static: false }) table;
+  @ViewChild('table') table;
   rows: any[] = [];
   filteredData: any[] = [];
   data: any[] = [];
