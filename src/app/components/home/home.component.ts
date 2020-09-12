@@ -29,42 +29,42 @@ export class HomeComponent implements OnInit {
       lat: 36.8296878473944,
       lng: 10.124534251973637,
       label: 'Tunis',
-      number: 174,
+      number: 828,
       draggable: false
     },
     {
       lat: 36.675161898545305,
       lng: 10.218753437255579,
       label: 'Ben Arous',
-      number: 79,
+      number: 835,
       draggable: false
     },
     {
       lat: 36.66577743735055,
       lng: 10.619411561738511,
       label: 'Nabeul',
-      number: 12,
+      number: 198,
       draggable: false
     },
     {
       lat: 36.96561924096172,
       lng: 10.097932124711377,
       label: 'Ariana',
-      number: 84,
+      number: 381,
       draggable: false
     },
     {
       lat: 37.14144514551905,
       lng: 9.597074191524406,
       label: 'Bizerte',
-      number: 17,
+      number: 96,
       draggable: false
     },
     {
       lat: 36.80973428883044,
       lng: 9.867113994811723,
       label: 'La Manouba',
-      number: 35,
+      number: 112,
       draggable: false
     },
 
@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
       lat: 36.67648706798987,
       lng: 9.316922824336906,
       label: 'Beja',
-      number: 3,
+      number: 27,
       draggable: false
     },
 
@@ -80,35 +80,35 @@ export class HomeComponent implements OnInit {
       lat: 36.67648706798987,
       lng: 9.316922824336906,
       label: 'Jendouba',
-      number: 1,
+      number: 110,
       draggable: false
     },
     {
       lat: 36.063713633929936,
       lng: 8.678384450825991,
       label: 'Le Kef',
-      number: 5,
+      number: 330,
       draggable: false
     },
     {
       lat: 36.037066304075324,
       lng: 9.299111989888491,
       label: 'Siliana',
-      number: 1,
+      number: 53,
       draggable: false
     },
     {
       lat: 36.40633301042683,
       lng: 10.011207361660679,
       label: 'Zaghouan',
-      number: 3,
+      number: 16,
       draggable: false
     },
     {
       lat: 35.89956217310192,
       lng: 10.443783056807105,
       label: 'Sousse',
-      number: 64,
+      number: 560,
       draggable: false
     },
     {
@@ -122,14 +122,14 @@ export class HomeComponent implements OnInit {
       lat: 35.63447482915911,
       lng: 10.723483761067468,
       label: 'Monastir',
-      number: 35,
+      number: 189,
       draggable: false
     },
     {
       lat: 35.383027014557854,
       lng: 10.860812862629968,
       label: 'Mahdia',
-      number: 12,
+      number: 88,
       draggable: false
     },
 
@@ -137,7 +137,7 @@ export class HomeComponent implements OnInit {
       lat: 35.29306159222377,
       lng: 8.7675770337282,
       label: 'Kasserine',
-      number: 2,
+      number: 72,
       draggable: false
     },
 
@@ -145,35 +145,35 @@ export class HomeComponent implements OnInit {
       lat: 34.90304961843806,
       lng: 9.502446209211598,
       label: 'Sidi Bouzid',
-      number: 5,
+      number: 82,
       draggable: false
     },
     {
       lat: 34.74974960275333,
       lng: 10.395151421166918,
       label: 'Sfax',
-      number: 31,
+      number: 246,
       draggable: false
     },
     {
       lat: 34.43255107554276,
       lng: 8.697205247115324,
       label: 'Gafsa',
-      number: 23,
+      number: 83,
       draggable: false
     },
     {
       lat: 33.8144616330769,
       lng: 9.83858835439011,
       label: 'Gabès',
-      number: 15,
+      number: 1010,
       draggable: false
     },
     {
       lat: 33.39714680679499,
       lng: 10.760154322247088,
       label: 'Mednine',
-      number: 70,
+      number: 258,
       draggable: false
     }
     ,
@@ -181,7 +181,7 @@ export class HomeComponent implements OnInit {
       lat: 32.06167466405954,
       lng: 9.843601300436378,
       label: 'Tataouine',
-      number: 23,
+      number: 119,
       draggable: false
     }
     ,
@@ -189,7 +189,7 @@ export class HomeComponent implements OnInit {
       lat: 33.96043402368186,
       lng: 7.873555573095867,
       label: 'Tozeur',
-      number: 3,
+      number: 14,
       draggable: false
     },
 
@@ -197,7 +197,7 @@ export class HomeComponent implements OnInit {
       lat: 33.31076079071958,
       lng: 8.864260209156498,
       label: 'Kebili',
-      number: 45,
+      number: 177,
       draggable: false
     }
   ]
