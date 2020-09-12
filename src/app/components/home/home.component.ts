@@ -520,7 +520,7 @@ export class HomeComponent implements OnInit {
   ],
   colorValuePath: 'infection',
      visible: true,
-     minRadius: 20,
+     minRadius: 5,
      dataSource: [
       {name: "Manouba", infection: 112},
       {name: "Beja",infection: 27},
@@ -548,7 +548,7 @@ export class HomeComponent implements OnInit {
       {name: "Sfax",infection: 246}
 
      ],
-     maxRadius: 40,
+     maxRadius: 30,
      valuePath: 'infection'
  }]
  public legendSettings: Object = {
@@ -565,6 +565,96 @@ public zoomSettings: Object = {
   doubleClickZoom:true
 };
 
+public barChartOptions: ChartOptions = {
+
+  responsive: true,
+
+  // We use these empty structures as placeholders for dynamic theming.
+
+  scales: { xAxes: [{}], yAxes: [{}] },
+
+  plugins: {
+
+    datalabels: {
+
+      anchor: 'end',
+
+      align: 'end',
+
+    }
+
+  }
+
+};
+
+public barChartLabels: Label[] = [
+"Manouba", 
+"Beja",
+"Ben Arous",
+"Gabes", 
+"Gafsa",
+"Jendouba", 
+"Kairouan", 
+"Kasserine",
+"Kebili", 
+"Le Kef",
+"Medenine", 
+"Mahdia", 
+"Tataouine",
+"Tozeur",
+"Zaghouan",
+"Monastir",
+"Sidi Bouzid",
+"Siliana",
+"Sousse",
+"Ariana",
+"Bizerte",
+"Nabeul",
+"Tunis",
+"Sfax"
+];
+
+public barChartType: ChartType = 'bar';
+
+public barChartLegend = true;
+
+public barChartColors: Color[] = [
+  { backgroundColor: '#d36666' },
+]
+
+public barChartData: ChartDataSets[] = [
+
+  { data: [
+112,
+27,
+835,
+1010,
+83,
+110,
+189,
+72,
+177,
+330,
+258,
+88,
+119,
+14,
+16,
+374,
+82,
+53,
+560,
+381,
+96,
+198,
+828,
+246
+  ], label: 'Nombre de cas confirmés' },
+
+
+];
+
+
 
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) {
 
@@ -573,7 +663,6 @@ public zoomSettings: Object = {
   ngOnInit() {
     this.getIfectionData();
     this.getStatsdata();
-    
   }
 
   getIfectionData() {

@@ -91,7 +91,7 @@
     <br><br>
     <div class="row">
 
-        <div class="card col-md-12 col-xs-12 col-sm-12">
+        <div class="card col-md-4 col-xs-12 col-sm-12">
             <ejs-maps id='rn-container'  [legendSettings]='legendSettings' [zoomSettings] = 'zoomSettings'>
                 <e-layers>
                 <e-layer  [shapeData]='shapeData' [bubbleSettings]='bubbleSettings' [dataLabelSettings]='dataLabelSettings'  ></e-layer>
@@ -116,8 +116,21 @@
             </button>
         -->
         </div>
+        <div class="card col-md-8 col-xs-12 col-sm-12" >
+            <div class="chart-wrapper">
+                <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                [colors]="barChartColors">
+              </canvas>
+        
+                </div>
+                </div>
 <br>
-        <div class="card col-md-12 col-xs-12 col-sm-12" style="margin-top: 30px;">
+        <div class="card col-md-12 col-xs-12 col-sm-12">
             <div class="chart-wrapper">
                 <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
                     [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
