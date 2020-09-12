@@ -15,6 +15,9 @@ import { AgmCoreModule } from '@agm/core';
 import { WorldInfoComponent } from './components/world-info/world-info.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NoRightClickDirective } from './directives/no-right-click.directive';
+// maps
+import { MapsModule } from '@syncfusion/ej2-angular-maps';
+import { LegendService, MarkerService, MapsTooltipService, DataLabelService, BubbleService, NavigationLineService, SelectionService, AnnotationsService, ZoomService } from '@syncfusion/ej2-angular-maps';
 
 @NgModule({
   declarations: [
@@ -36,10 +39,11 @@ import { NoRightClickDirective } from './directives/no-right-click.directive';
     AgmCoreModule.forRoot({
       //AIzaSyDHnIrJsd22La-vDm2SQdHv_pWHJwdzAAo
       apiKey: 'AIzaSyCDhjF3LNn2qqYUivCkiyYD8lQMAzihz7I'
-    })
+    }),
+    MapsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [DataService],
+  providers: [DataService, LegendService, MarkerService, MapsTooltipService, DataLabelService, BubbleService, NavigationLineService , SelectionService, AnnotationsService, ZoomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

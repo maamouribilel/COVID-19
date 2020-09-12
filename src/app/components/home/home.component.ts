@@ -3,6 +3,10 @@ import { DataService } from 'src/app/services/data.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ChartDataSets, ChartOptions, ChartPoint, ChartType } from 'chart.js';
 import { Color, Label, SingleDataSet } from 'ng2-charts';
+import { ViewEncapsulation, ViewChild } from '@angular/core';
+import { Maps, Bubble, Legend, Zoom } from '@syncfusion/ej2-angular-maps';
+import { tunisia_map } from './tunisia-map';
+Maps.Inject(Bubble,Legend, Zoom);
 
 // just an interface for type safety.
 interface marker {
@@ -499,6 +503,69 @@ export class HomeComponent implements OnInit {
   public polarAreaLegend = true;
   public polarAreaChartType: ChartType = 'polarArea';
 
+
+  // new map data 
+  public shapeData: Object = tunisia_map;
+  public shapeDataPath: Object = 'name';
+  public shapePropertyPath: Object = 'name';
+  public bubbleSettings: Object = [{
+    fill: '#d36565',
+    colorMapping: [
+      {
+          from: 0, to: 300, minOpacity: 0.4, maxOpacity: 1, color: '#d36565'
+      },
+      {
+          from: 300, to: 2000, minOpacity: 0.7, maxOpacity: 1, color: '#d36565'
+      },
+  ],
+  colorValuePath: 'infection',
+     visible: true,
+     minRadius: 20,
+     dataSource: [
+      {name: "Manouba", infection: 112},
+      {name: "Beja",infection: 27},
+      {name: "Ben Arous",infection: 835},
+      {name: "Gabes", infection: 1010},
+      {name: "Gafsa",infection: 83},
+      {name: "Jendouba", infection: 110},
+      {name: "Kairouan", infection: 189},
+      {name: "Kasserine",infection: 72},
+      {name: "Kebili", infection: 177},
+      {name: "Le Kef", infection: 330},
+      {name: "Medenine", infection: 258},
+      {name: "Mahdia", infection: 88},
+      {name: "Tataouine",infection: 119},
+      {name: "Tozeur", infection: 14},
+      {name: "Zaghouan", infection: 16},
+      {name: "Monastir", infection: 374},
+      {name: "Sidi Bouzid",infection:82 },
+      {name: "Siliana", infection:53 },
+      {name: "Sousse", infection: 560},
+      {name: "Ariana", infection:381 },
+      {name: "Bizerte", infection: 96},
+      {name: "Nabeul", infection:198 },
+      {name: "Tunis", infection: 828},
+      {name: "Sfax",infection: 246}
+
+     ],
+     maxRadius: 40,
+     valuePath: 'infection'
+ }]
+ public legendSettings: Object = {
+ visible: false,
+ type: 'Bubbles'
+};
+public dataLabelSettings: Object = {
+  visible: false,
+  labelPath: 'name',
+};
+public zoomSettings: Object = {
+  enable: true,
+  pinchZooming:true,
+  doubleClickZoom:true
+};
+
+
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) {
 
   }
@@ -506,6 +573,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getIfectionData();
     this.getStatsdata();
+    
   }
 
   getIfectionData() {
