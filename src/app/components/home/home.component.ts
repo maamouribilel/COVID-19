@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit {
       lat: 35.763170489199084,
       lng: 9.839225623417498,
       label: 'Kairouan',
-      number: 6,
+      number: 189,
       draggable: false,
     },
     {
