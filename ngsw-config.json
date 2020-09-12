@@ -31,7 +31,7 @@
       "urls": ["https://coronavirus-19-api.herokuapp.com/countries/TUNISIA","https://covid19.soficoop.com/country/tn","https://corona.lmao.ninja/v2/countries"],
       "cacheConfig": {
         "maxAge": "12h",
-        "maxSize": 100,
+        "maxSize": 10,
         "strategy": "freshness",
         "timeout": "5s"
       }
