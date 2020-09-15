@@ -1,8 +1,8 @@
 {
   "name": "covid19-tn",
   "short_name": "covid19-tn",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#ab2328",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
