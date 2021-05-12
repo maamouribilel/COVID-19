@@ -23,7 +23,7 @@
     "@angular/service-worker": "~9.1.2",
     "@swimlane/ngx-datatable": "^16.0.3",
     "@syncfusion/ej2-angular-maps": "^18.2.54",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "ng2-charts": "^2.3.0",
     "ngx-spinner": "^9.0.1",
     "rxjs": "~6.5.5",
